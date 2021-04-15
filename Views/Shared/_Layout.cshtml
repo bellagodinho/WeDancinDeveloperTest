@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FrontendDeveloperTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @* TO DO ------ LEMBRAR COMO COLOCA FONTE EXTERNA
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">*@
+
+</head>
+<body>
+    <header>
+
+        @* TO DO ------ COLOCAR DROPDOWN NAS CATEGORIAS *@
+
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light fixed-top" style="padding: 0 16px;">
+            <div class="container-fluid" id="container-navbar">
+                <div class="row">
+                    <div class="col">
+                        <button class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse" aria-controls="navbarNav"
+                                aria-expanded="false" aria-label="Toggle Navbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class="mx-auto"></div>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav1 text-custom">PÁGINA INICIAL</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav2 text-custom">NOVIDADES</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav3 text-custom">FEMININO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav4 text-custom">MASCULINO</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link nav5 text-custom">EQUIPAMENTOS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="#">
+                            <img src="~/images/logowd.png" width="125" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        @* TO DO ------ TIRAR O BANNER DO SHARED *@
+
+        <div class="dancin-banner w-100 vh-100 d-flex justify-content-start align-items-center">
+            <div class="container">
+                <div class="row justify-content-start" style="margin-top: 12rem;">
+                    <h1 class="text-white" style="font-size:3rem; text-align:left;">CHEGOU NOVIDADE NO SITE</h1>
+                    <br />
+                </div>
+                <div class="row justify-content-start">
+                    <h1 class="text-white" style="font-size:4rem; text-align:left;">OUTONO/INVERNO 2021</h1>
+                    <br />
+                </div>
+                <div class="row justify-content-start">
+                    <button type="button" class="btn rounded-0 button1">descubra a coleção ➮</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @* TO DO ------ FAZER FOOTER COMPLETO *@
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - FrontendDeveloperTest - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+
+        @* TO DO------ DESCOBRIR COMO QUE PEGA TODOS OS ELEMENTOS *@
+
+        var nav = document.querySelector('nav');
+        var allcontainer = document.getElementById("container-navbar");
+        var nav1 = document.querySelector(".nav1");
+        var nav2 = document.querySelector(".nav2");
+        var nav3 = document.querySelector(".nav3");
+        var nav4 = document.querySelector(".nav4");
+        var nav5 = document.querySelector(".nav5");
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 350) {
+                nav.classList.add('bg-light', 'shadow');
+                allcontainer.classList.remove('container-fluid');
+                allcontainer.classList.add('container');
+                nav1.classList.remove('text-custom');
+                nav2.classList.remove('text-custom');
+                nav3.classList.remove('text-custom');
+                nav4.classList.remove('text-custom');
+                nav5.classList.remove('text-custom');
+            } else {
+                nav.classList.remove('bg-light', 'shadow');
+                allcontainer.classList.add('container-fluid');
+                allcontainer.classList.remove('container');
+                nav1.classList.add('text-custom');
+                nav2.classList.add('text-custom');
+                nav3.classList.add('text-custom');
+                nav4.classList.add('text-custom');
+                nav5.classList.add('text-custom');
+            }
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

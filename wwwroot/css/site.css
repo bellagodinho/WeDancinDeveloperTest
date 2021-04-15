@@ -1,0 +1,140 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #cd2e7e;
+}
+
+.col-4 {
+    flex-basis: 25% !important;
+    padding: 10px !important;
+    min-width: 200px !important;
+    margin-bottom: 50px !important;
+}
+
+.col-4 img {
+    width: 70% !important;
+}
+
+.col-sm img {
+    opacity: 1;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.col-sm img:hover {
+    opacity: 0.6;
+}
+
+.button1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: white;
+    font-family: Gadugi;
+    border-color: white;
+}
+
+.button1:hover {
+    background-color: white;
+    color: #262D47 !important;
+}
+
+.button2 {
+    border-color: black;
+    padding: 3px 6px;
+    font-family: Gadugi;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.text-custom {
+    color: white !important;
+    font-weight: 200;
+}
+
+a.text-custom:hover, a.text-custom:focus {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+}
+
+/* Main banner
+-------------------------------------------------- */
+.dancin-banner{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+
+    /* Sticky footer styles
+-------------------------------------------------- */
+    html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  /*font-family: 'Montserrat', sans-serif;*/
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
